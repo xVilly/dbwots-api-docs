@@ -4,7 +4,7 @@
 - **DBWOTS Launcher v2** - .NET WPF Desktop Application - [Learn More](#2-dbwots-launcher-net-desktop-application)
 - *Other administrative tools for maintaining dbwots' gameserver and the database with singular endpoints*
 
-Both main clients (React app & .Net desktop app) implement most functionalities of the API sharing same endpoints.<br>
+Both main clients (React app & .Net desktop app) implement most functionalities of the API, sharing same endpoints.<br>
 *All secrets, tokens, database records presented in this demonstration are created locally in dev environment and are safe to share.*<br>
 *Main 'dbwots' project page: https://dbwots.pl/*
 
