@@ -1,11 +1,12 @@
 # DBWOTS API Clients Demonstration
- DBWOTS API is used in production environment and as of Feb 2024 serves as a back-end for the following clients:
+ **DBWOTS API** is used in production environment and as of Feb 2024 serves as a back-end for the following clients:
 - **DBWOTS Site** - React Web Application - [Visit](http://dbwots.ddns.net/) - [Learn More](#1-dbwots-site-react-web-application)
-- **DBWOTS Launcher** - .NET WPF Desktop Application - [Learn More](#2-dbwots-launcher-net-desktop-application)
+- **DBWOTS Launcher v2** - .NET WPF Desktop Application - [Learn More](#2-dbwots-launcher-net-desktop-application)
 - *Other administrative tools for maintaining dbwots' gameserver and the database with singular endpoints*
 
 Both main clients (React app & .Net desktop app) implement most functionalities of the API sharing same endpoints.<br>
-*All secrets, tokens, database records presented in this demonstration are created locally in dev environment and are safe to share.*
+*All secrets, tokens, database records presented in this demonstration are created locally in dev environment and are safe to share.*<br>
+*Main 'dbwots' project page: https://dbwots.pl/*
 
 # 1. DBWOTS Site (React Web Application)
 Built in React JS using JavaScript, HTML, CSS and MUI components library<br>
