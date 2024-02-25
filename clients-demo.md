@@ -48,12 +48,15 @@ Last major update **Feb 2024** *(2FA Support)*<br>
 
 ## 2. DBWOTS Launcher (.NET Desktop Application)
 ###   created in .NET WPF framework using XAML and C# languages
+Built in .NET WPF using XAML, C#<br>
+Project started & released to production in **June 2021**<br>
+Last major update **June/July 2023** *(new 'DBWLauncher v2' with dbwots-api support)*<br>
 
-#### Home Page
+### 2.1 Home Page
 ![Launcher-Home-Page-IMG](resources/launcher1.png?raw=true "Launcher Home Page")
 
-#### Create Account Page
+### 2.2 Create Account Page
 ![Launcher-Create-Page-IMG](resources/launcher2.png?raw=true "Launcher Create Account Page")
 
-#### Highscores Page
+### 2.3 Highscores Page
 ![Launcher-Highscores-Page-IMG](resources/launcher3.png?raw=true "Launcher Highscores Page")
