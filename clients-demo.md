@@ -38,7 +38,7 @@ Last major update **Feb 2024** *(2FA Support)*<br>
 ![React-EmailFeatures-IMG](resources/react/11.EmailFeatures.png)
 
 ## 1.4 Game Data requests
-### Most of the endpoints are actually requesting access-protected resources from the DBWOTS game database, such as news articles, ongoing events, highscores, online players.
+### Most of the endpoints are actually requesting public or access-protected resources from the DBWOTS game database, such as news articles, ongoing events, highscores, online players.
 ![React-News-IMG](resources/react/14-online.png)
 ### The React App uses localstorage response caching to decrease average request count and load on the API (back-end rate limiting still takes care of any attacks from singular IP addresses, client-side caching just limits the API usage for average casual user)
 ![React-Caching-IMG](resources/react/13-caching.png)
