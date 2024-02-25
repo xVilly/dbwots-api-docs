@@ -12,7 +12,7 @@ Both main clients (React app & .Net desktop app) implement most functionalities 
 Built in React JS using JavaScript, HTML, CSS and MUI components library<br>
 Project started in **May 2023**<br>
 Released to production in **June 2023**<br>
-Last major update **Feb 2024** *(2FA Support)*<br>
+Most recent major update **Feb 2024** *(2FA Support)*<br>
 
 ## 1.1 Authentication
 ### React App uses *PUT api/auth/authenticate* with account number and password, receives access token (to store in localstorage) and refresh token (as http-only cookie)
@@ -50,7 +50,7 @@ Last major update **Feb 2024** *(2FA Support)*<br>
 ## 2. DBWOTS Launcher (.NET Desktop Application)
 Built in .NET WPF using XAML, C#<br>
 Project started & released to production in **June 2021**<br>
-Last major update **June/July 2023** *(new 'DBWLauncher v2' with dbwots-api support)*<br>
+Most recent major update **June/July 2023** *(new 'DBWLauncher v2' with dbwots-api support)*<br>
 
 ### 2.1 Home Page
 ![Launcher-Home-Page-IMG](resources/launcher1.png?raw=true "Launcher Home Page")
