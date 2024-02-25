@@ -1,22 +1,52 @@
 # DBWOTS API Clients Demonstration
-As of 2024, DBWOTS API is used in production environment and serves as a back-end for the following clients:
-- DBWOTS Site - React Web Application
-- DBWOTS Launcher - .NET WPF Desktop Application
-- *Other administrative tools for maintaining dbwots' gameserver and the database*
+ DBWOTS API is used in production environment and as of Feb 2024 serves as a back-end for the following clients:
+- **DBWOTS Site** - React Web Application - [Visit](http://dbwots.ddns.net/) - [Learn More](#1-react-web-application)
+- **DBWOTS Launcher** - .NET WPF Desktop Application - [Learn More]()
+- *Other administrative tools for maintaining dbwots' gameserver and the database with singular endpoints*
 
-Both main clients (react app & .net desktop app) implement most functionalities of the API.
+Both main clients (React app & .Net desktop app) implement most functionalities of the API sharing same endpoints.<br>
+*All secrets, tokens, database records presented in this demonstration are created locally in dev environment and are safe to share.*
 
-## 1. React Web Application
-### Built in React JS using JavaScript, HTML, CSS and MUI components library
-### Project started in May 2023
-### Released to production in June 2023
-### Last major update - Feb 2024 (2FA Support)
+# 1. DBWOTS Site (React Web Application)
+Built in React JS using JavaScript, HTML, CSS and MUI components library<br>
+Project started in **May 2023**<br>
+Released to production in **June 2023**<br>
+Last major update **Feb 2024** *(2FA Support)*<br>
+
+## 1.1 Authentication
+### React App uses *PUT api/auth/authenticate* with account number and password, receives access token (to store in localstorage) and refresh token (as http-only cookie)
+![React-Authentication-IMG](resources/react/1.authentication.png)
+### API stores this session in database. This approach allows for advanced session management, ip-based logouts and unknown device alerts.
+![React-SessionStorage-IMG](resources/react/2.session-storage.png)
+### The refresh token is stored as a http-only cookie (unable to be accessed by client-side scripts) and is sent back to API when client requests new access token.
+![React-Cookie-IMG](resources/react/3.httponlycookie.png)
+
+## 1.2 Account Management
+### API offers many options for user to modify or manage his account. React App implements the donation page, shard shop, referral system, password change, security options such as 2FA.
+![React-AccPage-IMG](resources/react/4.accountpage.png)
+### Referral system:
+![React-Referral-IMG](resources/react/7.referralsystem.png)
+### Donation page:
+![React-Donation-IMG](resources/react/6.donationpage.png)
+### Shard shop:
+![React-ShardShop-IMG](resources/react/8.shardshop.png)
+
+## 1.3 Email features
+### API offers multiple email features such as account recovery, password change, master-mode (for administration)
+![React-EmailVerification-IMG](resources/react/10.EmailVerification.png)
+![React-EmailFeatures-IMG](resources/react/11.EmailFeatures.png)
+
+## 1.4 Game Data requests
+### Most of the endpoints are actually requesting access-protected resources from the DBWOTS game database, such as news articles, ongoing events, highscores, online players.
+![React-News-IMG](resources/react/14-online.png)
+### The React App uses localstorage response caching to decrease average request count and load on the API (back-end rate limiting still takes care of any attacks from singular IP addresses, client-side caching just limits the API usage for average casual user)
+![React-Caching-IMG](resources/react/13-caching.png)
+### API also provides pagination for some endpoints. The example below shows how React sends a 'multi' requests limiting received object count to just 5, starting at specified index.
+![React-Pagination-IMG](resources/react/12-pagination.png)
 
 
 
-
-
-## > Launcher (Windows Desktop App)
+## 2. DBWOTS Launcher (.NET Desktop Application)
 ###   created in .NET WPF framework using XAML and C# languages
 
 #### Home Page
