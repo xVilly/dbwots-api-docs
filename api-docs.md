@@ -30,6 +30,7 @@ Two-factor authentication uses TOTP concept to link user's account with an exter
 ## 3. API Reference
 ### 3.1 Creating new account
 - **POST** /api/auth/account
+  - Creates new user account
    - Input Form: *AccountName*, *Password*, *ConfirmPassword*, *Email*, *DisplayName*
    - Returns (200):
      ```json
@@ -40,6 +41,7 @@ Two-factor authentication uses TOTP concept to link user's account with an exter
      ```
 ### 3.2 Authentication
 - **PUT** /api/auth/authenticate
+  - Authenticates user and creates new session
    - Input Form: *AccountName*, *Password*, *DeviceIdentifier*, *ClientVersion*
    - Returns (200):
     ```json
@@ -55,6 +57,7 @@ Two-factor authentication uses TOTP concept to link user's account with an exter
     }
     ```
 - **PUT** /api/auth/refresh
+  - Requires valid refresh token stored in the browser as http-only cookie
    - Input Form: *DeviceIdentifier*, *ClientVersion*
    - Returns (200):
     ```json
@@ -148,7 +151,7 @@ Two-factor authentication uses TOTP concept to link user's account with an exter
     }
     ```
 - **PATCH** /api/auth/account/email
-    - Changes email
+    - Changes email connected to the account (requires old email)
    - Input Form: *NewEmail*, *Verify (from old email)*
    - Returns (200):
     ```json
@@ -201,6 +204,7 @@ Two-factor authentication uses TOTP concept to link user's account with an exter
     }
     ```
 - **GET** /api/game/account/characters
+  - Fetches all game characters from currently authorized account
    - Returns (200):
      ```json
      [
@@ -217,6 +221,7 @@ Two-factor authentication uses TOTP concept to link user's account with an exter
      ]
      ```
 - **POST** /api/game/account/characters
+  - Creates new game character
    - Input Form: *Name*, *Vocation*, *Sex*
    - Returns(200):
      ```json
@@ -226,6 +231,7 @@ Two-factor authentication uses TOTP concept to link user's account with an exter
      }
      ```
 - **DELETE** /api/game/account/characters
+  - Deletes game character
    - Input Form: *CharacterId*, *CharacterName*, *Password*
    - Returns(200):
      ```json
